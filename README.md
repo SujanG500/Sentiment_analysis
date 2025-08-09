@@ -1,69 +1,98 @@
-🗳️ Political Sentiment & Emotion Analysis – Nepal
-📄 Abstract
-This project focuses on detecting and classifying sentiments and emotions expressed in political discourse from sources such as social media, news articles, and public forums. The aim is to evaluate changes in public perception towards major political figures before and after elections in Nepal.
+# 🗳️ Political Sentiment & Emotion Analysis – Nepal
 
-By leveraging BERT and RoBERTa models, we analyzed large-scale datasets to provide real-time sentiment insights. This system can be valuable for tracking political trends, understanding public reactions to policies, and predicting electoral outcomes.
+## Overview
+The **Political Sentiment & Emotion Analysis** project is an NLP system that detects and classifies **sentiments** and **emotions** in political discourse. It processes text from **social media**, **news articles**, and **public forums** to evaluate **changes in public perception** toward major political figures **before and after elections** in Nepal.
 
-✨ Features
-🗣️ Multi-class sentiment classification (Positive, Negative, Neutral)
+Built with **BERT** and **RoBERTa**, the system supports **multilingual input** (Devanagari, Romanized Nepali, English) and can handle **large-scale datasets** to provide near real-time insights. This makes it valuable for tracking political trends, analyzing reactions to policies, and forecasting electoral outcomes.
 
-❤️ Emotion detection in political text
+---
 
-🌐 Multilingual support (Devanagari, Romanized Nepali, English)
+## Features
+- 🗣️ **Multi-class sentiment classification** — Positive, Negative, Neutral  
+- ❤️ **Emotion detection** (anger, joy, sadness, etc.)  
+- 🌐 **Multilingual support** — Devanagari, Romanized Nepali, English  
+- 📊 **Pre vs Post election comparison** for public perception analysis  
+- ⚡ **Real-time monitoring** for streaming data sources  
+- 📈 **Visualizations** of sentiment and emotion distributions (time-series, pie charts)  
+- 🗄️ **Scalable processing** for large datasets with batch & streaming modes
 
-📊 Comparative analysis of sentiments before and after elections
+---
 
-⚡ Real-time political sentiment monitoring
+## 🛠️ Technologies Used
+- **Programming Language:** Python  
+- **NLP & Models:** Hugging Face Transformers — BERT, RoBERTa  
+- **Frameworks:** PyTorch / Transformers
+- **Data & Utils:** Pandas, NumPy, scikit-learn  
+- **Visualization:** Matplotlib, Seaborn, Plotly 
 
-🛠️ Technologies Used
-🤖 NLP Models: BERT, RoBERTa
+---
 
-🐍 Programming Language: Python
+## 🚀 Installation
 
-📚 Libraries: Transformers (Hugging Face), PyTorch, Pandas, NumPy
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/political-sentiment-analysis.git
+    cd political-sentiment-analysis
+    ```
 
-📈 Visualization: Matplotlib, Seaborn
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-🚀 Installation
-Clone the repository:
+---
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/political-sentiment-analysis.git
-cd political-sentiment-analysis
-Install required dependencies:
+## ▶️ Usage
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-▶️ Usage
-Run the analysis script:
+- Run the analysis script:
+    ```bash
+    python analyze.py --input data/comments.csv --output results/
+    ```
 
-bash
-Copy
-Edit
-python analyze.py
-View sentiment and emotion classification results in the output folder.
+- Run the dashboard (if included):
+    ```bash
+    streamlit run app.py
+    # or
+    python run_dashboard.py
+    ```
 
-📚 Dataset
-Comments directed at major political figures in Nepal
+- Example arguments (replace with your file paths):
+    ```bash
+    python analyze.py --model roberta-base --labels mapping.json --time-split pre_post
+    ```
 
-Data collected from social media, news articles, and forums
+Results and visualizations will be saved to the `results/` folder.
 
-Includes text from before and after the elections
+---
 
-Multilingual dataset (Devanagari, Romanized Nepali, English)
+## 📚 Dataset
+- Comments directed at major political figures in Nepal  
+- Collected from social media platforms, news article comments, and public forums  
+- Labeled with `time-period` (pre-election, post-election) for comparative study  
+- Multilingual: Devanagari (Nepali script), Romanized Nepali, and English
 
-🧠 Model Details
-Models Used: BERT, RoBERTa
+---
 
-Tasks: Sentiment classification & emotion detection
+## 🧠 Model Details
+- **Models:** BERT and RoBERTa fine-tuned for:
+  - Sentiment classification (LABEL_0 = Negative, LABEL_1 = Positive, LABEL_2 = Neutral)  
+  - Emotion classification (multi-label / multi-class depending on dataset)
+- **Training:** Transfer learning with class-balancing, LR scheduling, and early stopping  
+- **Evaluation:** Accuracy, F1-score, Precision, Recall; confusion matrices for class insights  
+- **Deployment:** Batch processing and optional streaming pipeline for real-time inference
 
-Performance: Optimized for multilingual political discourse
+---
 
-Scalability: Can process large datasets and real-time streams
+## 📈 Results & Applications
+- Track public opinion shifts across time and events  
+- Assist policymakers and campaign teams in understanding public sentiment  
+- Monitor public reaction to policy changes or announcements  
+- Feed into forecasting models for election outcome analysis
 
-🔑 Keywords
-Sentiment Analysis, Emotion Detection, NLP, Text Classification, Political Sentiment Monitoring, Market Research, Nepal
+---
+
+## 🔑 Keywords
+Sentiment Analysis, Emotion Detection, NLP, Text Classification, Political Monitoring, BERT, RoBERTa, Nepal
+
+---
+
